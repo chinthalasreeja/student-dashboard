@@ -23,7 +23,7 @@ https://your-vercel-url.vercel.app
 Add your repository URL:
 
 ```txt
-https://github.com/your-username/student-dashboard
+https://github.com/chinthalasreeja/student-dashboard
 ```
 
 ---
