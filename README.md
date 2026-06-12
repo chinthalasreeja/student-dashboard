@@ -13,7 +13,7 @@ Deployed on **Vercel**
 Add your URL here:
 
 ```txt
-https://your-vercel-url.vercel.app
+https://student-dashboard-tau-five.vercel.app/
 ```
 
 ---
