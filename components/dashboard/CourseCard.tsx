@@ -8,42 +8,59 @@ type Course = {
   progress: number;
 };
 
-export default function CourseCard({ course }: { course: Course }) {
+export default function CourseCard({
+  course,
+}: {
+  course: Course;
+}) {
   return (
-    <motion.div
+    <motion.article
+      whileHover={{
+        scale: 1.02,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
+      }}
       className="
-        p-4 rounded-xl
-        border border-white/10
-        bg-white/5
-        text-white
-        transition
-        hover:scale-[1.03]
-        hover:border-white/30
-        hover:shadow-lg
-        hover:shadow-white/5
-      "
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      p-5
+      rounded-2xl
+      border
+      border-white/10
+      bg-white/5
+      backdrop-blur
+      text-white
+      overflow-hidden
+      relative
+    "
     >
-      
       <h2 className="text-lg font-semibold">
         {course.title}
       </h2>
 
-      <p className="text-sm opacity-70 mt-1">
+      <p className="mt-2 text-sm text-white/60">
         Progress: {course.progress}%
       </p>
 
-      <div className="w-full h-2 bg-white/10 rounded mt-3 overflow-hidden">
+      <div className="mt-4 h-2 rounded bg-white/10 overflow-hidden">
         <motion.div
-          className="h-full bg-gradient-to-r from-purple-500 to-blue-500"
           initial={{ width: 0 }}
-          animate={{ width: `${course.progress}%` }}
-          transition={{ duration: 1 }}
+          animate={{
+            width: `${course.progress}%`,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="
+          h-full
+          rounded
+          bg-gradient-to-r
+          from-violet-500
+          to-blue-500
+        "
         />
       </div>
-
-    </motion.div>
+    </motion.article>
   );
 }

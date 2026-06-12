@@ -1,39 +1,80 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import {
+  LayoutDashboard,
+  BookOpen,
+  BarChart3,
+  Settings,
+} from "lucide-react";
 
-const items = ["Home", "Courses", "Activity"];
+const items = [
+  {
+    icon: LayoutDashboard,
+    label: "Dashboard",
+  },
+  {
+    icon: BookOpen,
+    label: "Courses",
+  },
+  {
+    icon: BarChart3,
+    label: "Activity",
+  },
+  {
+    icon: Settings,
+    label: "Settings",
+  },
+];
 
 export default function Sidebar() {
-  const [active, setActive] = useState("Home");
-
   return (
-    <aside className="h-screen w-56 p-4 border-r border-white/10 bg-black text-white">
-      
-      <h2 className="text-xl font-bold mb-6">
-        Dashboard
-      </h2>
+    <aside
+      className="
+      hidden
+      md:flex
+      flex-col
+      bg-white/5
+      border-r
+      border-white/10
+      p-4
+      lg:w-60
+      md:w-20
+      min-h-screen
+    "
+    >
+      <div className="mb-10 text-xl font-bold">
+        SD
+      </div>
 
-      <nav className="space-y-2 text-sm relative">
-        {items.map((item) => (
-          <div
-            key={item}
-            onClick={() => setActive(item)}
-            className="relative p-2 cursor-pointer"
-          >
-            {active === item && (
-              <motion.div
-                layoutId="activeTab"
-                className="absolute inset-0 bg-white/10 rounded"
-              />
-            )}
+      <nav className="space-y-3">
 
-            <span className="relative z-10">{item}</span>
-          </div>
-        ))}
+        {items.map((item) => {
+          const Icon = item.icon;
+
+          return (
+            <button
+              key={item.label}
+              className="
+                flex
+                items-center
+                gap-3
+                w-full
+                rounded-xl
+                p-3
+                hover:bg-white/10
+                transition
+              "
+            >
+              <Icon size={20} />
+
+              <span className="hidden lg:block">
+                {item.label}
+              </span>
+            </button>
+          );
+        })}
+
       </nav>
-
     </aside>
   );
 }
