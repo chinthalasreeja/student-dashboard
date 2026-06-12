@@ -1,36 +1,276 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student Dashboard — Next-Gen Learning Dashboard
 
-## Getting Started
+A futuristic student learning dashboard built as part of the **Frontend Intern Challenge**.
 
-First, run the development server:
+This project focuses on **server-rendered data**, **smooth animations**, **responsive design**, and a **modern Bento Grid interface** powered by Supabase.
+
+---
+
+## Live Demo
+
+Deployed on **Vercel**
+
+Add your URL here:
+
+```txt
+https://your-vercel-url.vercel.app
+```
+
+---
+
+## GitHub Repository
+
+Add your repository URL:
+
+```txt
+https://github.com/your-username/student-dashboard
+```
+
+---
+
+## Tech Stack
+
+### Framework
+
+* Next.js (App Router)
+
+### Database / Backend
+
+* Supabase
+
+### Styling
+
+* Tailwind CSS
+
+### Animation
+
+* Framer Motion
+
+### Icons
+
+* Lucide React
+
+### Deployment
+
+* Vercel
+
+---
+
+## Features Implemented
+
+### Dashboard Layout
+
+* Bento Grid dashboard structure
+* Dark theme UI
+* Gradient glow background
+* Glassmorphism effects
+
+### Sidebar
+
+* Responsive sidebar
+* Desktop → full navigation
+* Tablet → icon collapse
+* Mobile → bottom navigation
+
+### Hero Tile
+
+* Welcome section
+* Daily learning streak indicator
+* Premium dashboard styling
+
+### Dynamic Course Tiles
+
+* Data fetched from Supabase
+* Animated progress bars
+* Hover interactions
+* Smooth spring animations
+
+### Activity Tile
+
+* Contribution-style activity graph
+
+### Loading Experience
+
+* Skeleton loading screen
+* Smooth loading transitions
+
+### Motion & Interaction
+
+* Framer Motion integration
+* Sequential tile entrance animations
+* Hover scale effects
+* Spring physics
+
+### Deployment
+
+* GitHub integration
+* Vercel production deployment
+
+---
+
+## Architecture Decisions
+
+### Server Components (RSC)
+
+Course data is fetched inside Next.js Server Components.
+
+Benefits:
+
+* Faster initial load
+* Secure server-side data access
+* Reduced client-side requests
+
+---
+
+### Client Components
+
+Interactive UI components use Client Components:
+
+Examples:
+
+* Course cards
+* Sidebar interactions
+* Motion animations
+
+This keeps rendering efficient while enabling rich interactions.
+
+---
+
+## Database Schema
+
+Supabase table:
+
+```sql
+courses1
+```
+
+Columns:
+
+```txt
+id
+title
+progress
+created_at
+```
+
+Example Data:
+
+```txt
+Advanced React Patterns — 75%
+
+Next.js Mastery — 45%
+
+TypeScript Pro — 90%
+
+System Design — 60%
+```
+
+---
+
+## Environment Variables
+
+Create:
+
+```txt
+.env.local
+```
+
+Add:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+Example template included:
+
+```txt
+.env.example
+```
+
+---
+
+## Run Locally
+
+Install:
+
+```bash
+npm install
+```
+
+Start:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Folder Structure
 
-## Deploy on Vercel
+```plaintext
+app/
+components/
+ dashboard/
+lib/
+public/
+types/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+README.md
+.env.example
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Challenges Faced
+
+* Setting up Supabase environment variables for production
+* Handling Server Components correctly
+* Avoiding layout shifts during animation
+* Making Bento Grid responsive across devices
+* Configuring deployment on Vercel
+
+---
+
+## Future Improvements
+
+* Authentication
+* Real activity analytics
+* Course filtering
+* Dark / Light theme toggle
+* User profiles
+* Dashboard customization
+
+---
+
+## Submission Checklist
+
+* Next.js App Router
+* Supabase Integration
+* Tailwind CSS
+* Framer Motion
+* Responsive Layout
+* Loading States
+* GitHub Repository
+* Vercel Deployment
+* `.env.example`
+* README Documentation
+
+---
+
+Built by **Sreeja Chinthala**
