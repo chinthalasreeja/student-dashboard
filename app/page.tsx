@@ -47,14 +47,16 @@ export default async function Home() {
       <Sidebar />
 
       {/* Content */}
-      <section
+<section
 className="
 flex-1
-p-6
+px-4
+py-6
 relative
 z-10
 overflow-y-auto
-pb-28
+pb-32
+md:p-6
 "
 >
 
@@ -80,11 +82,11 @@ pb-28
             backdrop-blur
           "
           >
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-2xl md:text-4xl font-bold">
               Welcome back 👋
             </h2>
 
-            <p className="mt-4 text-white/60">
+           <p className="mt-3 text-sm md:text-base text-white/60">
               Daily Learning Streak • 14 Days
             </p>
 
