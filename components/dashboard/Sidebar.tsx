@@ -53,18 +53,28 @@ export default function Sidebar() {
 
           return (
             <button
-              key={item.label}
-              className="
-                flex
-                items-center
-                gap-3
-                w-full
-                rounded-xl
-                p-3
-                hover:bg-white/10
-                transition
-              "
-            >
+  key={item.label}
+  className="
+    flex
+    items-center
+    gap-3
+    w-full
+    rounded-xl
+    p-3
+    text-white/70
+
+    hover:text-white
+    hover:bg-violet-500/20
+    hover:border
+    hover:border-violet-400
+    hover:shadow-lg
+    hover:shadow-violet-500/30
+    hover:translate-x-1
+
+    transition-all
+    duration-300
+  "
+>
               <Icon size={20} />
 
               <span className="hidden lg:block">
